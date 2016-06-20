@@ -1,4 +1,4 @@
-package i5.las2peer.services.test1234;
+package i5.las2peer.services.test;
 
 
 import java.net.HttpURLConnection;
@@ -56,13 +56,13 @@ import org.json.simple.JSONValue;
         contact = @Contact(name = "tset", email = "CAEAddress@gmail.com") ,
         license = @License(name = "BSD",
             url = "https://github.com/cae-development/microservice-Test1234/blob/master/LICENSE.txt") ) )
-public class Test1234 extends Service {
+public class Test extends Service {
 
 
 
 
 
-  public Test1234() {
+  public Test() {
     // read and set properties values
     setFieldValues();
 
