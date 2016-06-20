@@ -1,6 +1,6 @@
 package i5.las2peer.services.test8;
 
-
+import java.io.Serializable;
 import java.net.HttpURLConnection;
 
 import javax.ws.rs.DELETE;
@@ -92,6 +92,12 @@ public class Test8 extends Service {
   @ApiOperation(value = "test", notes = " ")
   public HttpResponse test() {
 
+    try {
+      Object test = this.invokeServiceMethod(
+          "test", "test");
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
     // test
     boolean test_condition = true;
     if(test_condition) {
