@@ -73,6 +73,35 @@ public class Test8 extends Service {
   // //////////////////////////////////////////////////////////////////////////////////////
 
 
+  /**
+   * 
+   * test
+   * 
+   *
+   * 
+   * @return HttpResponse  
+   * 
+   */
+  @GET
+  @Path("/est")
+  @Produces(MediaType.APPLICATION_JSON)
+  @Consumes(MediaType.TEXT_PLAIN)
+  @ApiResponses(value = {
+       @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "test")
+  })
+  @ApiOperation(value = "test", notes = " ")
+  public HttpResponse test() {
+
+    // test
+    boolean test_condition = true;
+    if(test_condition) {
+      JSONObject etst2 = new JSONObject();
+      HttpResponse test = new HttpResponse(etst2.toJSONString(), HttpURLConnection.HTTP_OK);
+      return test;
+    }
+    return null;
+  }
+
 
 
 
