@@ -91,10 +91,11 @@ public class Test8 extends Service {
   })
   @ApiOperation(value = "test", notes = " ")
   public HttpResponse test() {
+    Serializable test = null;
 
     try {
       Object test = this.invokeServiceMethod(
-          "test", "test");
+          "test", "test", test);
     } catch (Exception e) {
         e.printStackTrace();
     }
